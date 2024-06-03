@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../4_praktinis/style/stilius.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Žemėlapis</title>
+    <link href=’https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel=’stylesheet’ />
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div id="header">
+      <div class="logo">
+        <h1><img src="../4_praktinis/img/savivaldybelogo.svg" style="height: 100px;" alt=""></h1>
+        <p>Kretingos rajono savivaldybė</p>
+      </div>
+      <div class="navigation">
+        <a href="../4_praktinis/index.html" class="btn-default">Pagrindinis</a>
+        <a href="#column1" class="btn-default">Kontaktai</a>
+        <a href="../4_praktinis/Statistika.html" class="btn-default">Statistika</a>
+        <a href="" class="btn-default">Aplinka</a>
+        <a href="../4_praktinis/apie.html" class="btn-default">Apie</a>
+        <a href="../4_praktinis/pranešk.html" class="btn-default">"Pranešk"</a>
+      </div>
+    </div>
+
+
+    <!-- Slideshow -->
+<div class="slideshow-container">
+  <h1>Kretingos rajono žemėlapiai</h1>
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="../4_praktinis/img/baznycia.jpg" style="width:100%" >
+    <div class="text">Viešpaties Apreiškimo Švč. Mergelei Marijai Bažnyčia</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="../4_praktinis/img/dvaro rumai.jpg" style="width:100%" >
+    <div class="text">Kretingos dvaro rūmai</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="../4_praktinis/img/1.jpg" style="width:100%" height="600px">
+    <div class="text">????</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+</body>
+</html>
+<div id="middle">
+  <h3>Žemėlapiai</h3>
+  <div class="column" style="background-color: #bf214b8e;">
+    <a href="column"></a>
+    <h2>Kretingos r. statybos leidimų žemėlapis</h2>
+    <p style="padding-top: 1.8em;">Kviečiame susipažinti su Kretingos rajono statybos leidimų žemėlapiu
+    </p>
+    <p><a href="../4_praktinis/Statistika.html"class="btn-zem">Spausti čia</a></p>
+  </div>
+  <div class="column" style="background-color: #bf214bc0;">
+    <h2>Palangos saugomų teritorijų ir nekilnojamo turto kadastro žemėlapis</h2>
+    <p>Kviečiame susipažinti su palangos miesto saugomų teritorijų ir nekilnojamo turto kadastro žemėlapiu (darydamas antrą darbą, nepagalvojau, kad puslapis bus apie vieną savivaldybę)</p>
+    <p><a href="../4_praktinis/palanga.html"class="btn-zem">Spausti čia</a></p>
+  </div>
+  <div class="column" style="background-color: #bf214b8e;">
+    <h2>Gyventojų dalyvavimo sistema "Pranešk"</h2>
+    <p style="padding-top: 2em ;">Sistema "Pranešk" suteikia galimybę visiems teikti pasiūlymus ar pastebėjimus susijusius su Kretingos r. infrastruktūra</p>
+    <p><a href="../4_praktinis/pranešk.html"class="btn-zem">Spausti čia</a></p>
+  </div>
+
+  
+<!-- skelbimai? -->
+<!-- <h3>Skelbimai</h3>
+<div class="column" style="background-color: #bf214bc0;">
+  <a href="column"></a>
+  <h2>Kretingos r. aktualių duomenų žemėlapis</h2>
+  <p>Kviečiame susipažinti su kažkuo
+  </p>
+  <p2><a href="../4_praktinis/Statistika.html"class="btn-zem">Spausti čia</a></p2>
+</div>
+<div class="column" style="background-color: #bf214b8e;">
+  <h2>Palangos saugomų teritorijų ir nekilnojamo turto kadastro žemėlapis</h2>
+  <p>Kviečiame susipažinti su palangos miesto saugomų teritorijų ir nekilnojamo turto kadastro žemėlapiu (darydamas antrą darbą, nepagalvojau, kad puslapis bus apie vieną savivaldybę)</p>
+  <p3><a href="../4_praktinis/palanga.html"class="btn-zem">Spausti čia</a></p3>
+</div>
+<div class="column" style="background-color: #bf214bc0;">
+  <h2>Gyventojų dalyvavimo sistema "Pranešk"</h2>
+  <p>Sistema "Pranešk" suteikia galimybę visiems teikti pasiūlymus ar pastebėjimus susijusius su Kretingos r. infrastruktūra</p>
+  <p4><a href="../4_praktinis/pranešk.html"class="btn-zem">Spausti čia</a></p4>
+</div> -->
+<div id="column1"></div>
+<div class="column1" style="background-color: #e6dede;">
+<a href="column1"></a>
+<p>Savanorių g. 29A, LT-97111 Kretinga</p>
+<p>Tel.  +370 445 51294</p>
+<p>El. p.  savivaldybe@kretinga.lt</p>
+<p>Savivaldybės darbo laikas:</p>
+<p>Pirmad.–ketvirtad. 8–17 val.,</p>
+<p>penktad. 8–15.45 val.</p>
+<p>Pietų pertrauka 12–12.45 val.</p>
+</div>
+
+<!-- footer -->
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="https://www.facebook.com/kretinga.lt"><i class="fa fa-facebook"></i></a>
+<a href="https://www.instagram.com/kretingos_rajono_savivaldybe/"><i class="fa fa-instagram"></i></a>
+<a href="https://www.youtube.com/@Kretingosrajonosavivaldybe/featured"><i class="fa fa-youtube"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#kontaktai">Susisiekite su mumis</a></li>
+<li><a href="#">Privatumo politika</a></li>
+<li><a href="https://www.kretinga.lt/veiklos-sritys/karjera">Karjera</a></li>
+</ul>
+</div>
+
+<div class="row">
+  Savivaldybės biudžetinė įstaiga. Duomenys kaupiami ir saugomi Juridinių asmenų registre. Kodas 188715222. ;
+  <div class="row">Kretinga 2024 m.</div>
+</div>
+</div>
+</footer>
